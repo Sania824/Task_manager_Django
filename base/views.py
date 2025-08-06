@@ -37,6 +37,7 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
 class TaskList(LoginRequiredMixin, ListView):
+    #LoginRequiredMixin allows the user to access this page only if authenticated
     model = Task
     context_object_name = 'tasks'
 
